@@ -1,0 +1,150 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=48;
+	taxlabels
+	Adelie_penguin
+	American_crow
+	American_flamingo
+	Annas_hummingbird
+	Bald_eagle
+	Bar-tailed_trogon
+	Barn_owl
+	Brown_mesite
+	Budgerigar
+	Carmine_bee-eater
+	Chicken
+	Chimney_swift
+	Chuck-wills-widow
+	Common_cuckoo
+	Common_ostrich
+	Crested_ibis
+	Cuckoo-roller
+	Dalmatian_pelican
+	Downy_woodpecker
+	Emperor_penguin
+	Golden-collared_manakin
+	Great-crested_grebe
+	Great_cormorant
+	Grey-crowned_crane
+	Hoatzin
+	Kea
+	Killdeer
+	Little_egret
+	MacQueens_bustard
+	Medium_ground-finch
+	Northern_fulmar
+	Pekin_duck
+	Peregrine_falcon
+	Pigeon
+	Red-crested_turaco
+	Red-legged_seriema
+	Red-throated_loon
+	Rhinoceros_hornbill
+	Rifleman
+	Speckled_mousebird
+	Sunbittern
+	Turkey
+	Turkey_vulture
+	White-tailed_eagle
+	White-tailed_tropicbird
+	White-throated_tinamou
+	Yellow-throated_sandgrouse
+	Zebra_finch
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] ((White-throated_tinamou:1.0,Common_ostrich:1.0)[&label=0]:1.617705,((((Great-crested_grebe:1.0,American_flamingo:1.0)[&label=0]:1.888588,((Red-crested_turaco:1.0,(MacQueens_bustard:1.0,Common_cuckoo:1.0)[&label=0.25629,!color=#ff0000]:0.016782)[&label=3.5E-4,!name="Otidimorphae"]:0.062715,(Pigeon:1.0,(Brown_mesite:1.0,Yellow-throated_sandgrouse:1.0)[&label=0]:0.431125)[&label=0.00817,!name="Columbimorphae"]:0.035114)[&label=0.00368,!name="Columbimorphae+Otidimorphae"]:0.036348)[&label=0.6918,!color=#ff0000,!name="Columbea+Otidimorphae"]:0.013109,((Chuck-wills-widow:1.0,(Annas_hummingbird:1.0,Chimney_swift:1.0)[&label=0]:2.126158)[&label=0]:0.805668,((Hoatzin:1.0,((Killdeer:1.0,Grey-crowned_crane:1.0)[&label=0.1554,!color=#ff0000,!name="Cursorimorphae"]:0.028578,((White-tailed_tropicbird:1.0,Sunbittern:1.0)[&label=0]:0.416752,(Red-throated_loon:1.0,((Northern_fulmar:1.0,(Adelie_penguin:1.0,Emperor_penguin:1.0)[&label=0]:2.733077)[&label=0]:0.346966,(Great_cormorant:1.0,(Crested_ibis:1.0,(Little_egret:1.0,Dalmatian_pelican:1.0)[&label=0]:0.170528)[&label=0]:0.537157)[&label=0]:0.923825)[&label=0]:0.719822)[&label=0]:0.4917)[&label=0.00221]:0.052717)[&label=0.92701,!color=#ff0000,!name="Extended Waterbirds"]:0.002862)[&label=0.41901,!color=#ff0000,!name="Extended Waterbirds+Hoatzin"]:0.019228,((Barn_owl:1.0,(Turkey_vulture:1.0,(White-tailed_eagle:1.0,Bald_eagle:1.0)[&label=0]:2.962193)[&label=0]:0.471834)[&label=0]:0.115862,((Red-legged_seriema:1.0,(Peregrine_falcon:1.0,((Kea:1.0,Budgerigar:1.0)[&label=0]:3.107095,(Rifleman:1.0,(Golden-collared_manakin:1.0,(American_crow:1.0,(Medium_ground-finch:1.0,Zebra_finch:1.0)[&label=0]:2.527419)[&label=0]:3.330476)[&label=0]:1.243691)[&label=0]:3.018928)[&label=0]:0.565145)[&label=0]:0.478659)[&label=0]:0.30663,(Speckled_mousebird:1.0,(Cuckoo-roller:1.0,((Rhinoceros_hornbill:1.0,(Carmine_bee-eater:1.0,Downy_woodpecker:1.0)[&label=0]:0.426394)[&label=0]:0.638188,Bar-tailed_trogon:1.0)[&label=0]:0.294183)[&label=0]:0.508428)[&label=0]:0.120605)[&label=0]:0.075495)[&label=0]:1.002677)[&label=0.97693,!color=#ff0000]:0.001652)[&label=0.01256]:0.046855)[&label=0]:2.516895,(Pekin_duck:1.0,(Turkey:1.0,Chicken:1.0)[&label=0]:3.217476)[&label=0]:2.48516)[&label=0]:1.617705);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=2.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="label";
+	set branchLabels.fontName="Helvetica";
+	set branchLabels.fontSize=12;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=true;
+	set branchLabels.significantDigits=3;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Names";
+	set nodeLabels.fontName="Helvetica";
+	set nodeLabels.fontSize=12;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=true;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=false;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=2.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="Helvetica";
+	set tipLabels.fontSize=18;
+	set tipLabels.fontStyle=2;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=true;
+	set trees.orderType="increasing";
+	set trees.rooting=false;
+	set trees.rootingType="User Selection";
+	set trees.transform=true;
+	set trees.transformType="cladogram";
+end;
+
