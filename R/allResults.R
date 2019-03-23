@@ -40,12 +40,15 @@ ggplot(data=dtarget[dtarget$V1 %in% c("model.200.500000.0.0000001","model.200.50
   stat_bin(binwidth = 0.1,position = "stack" )+facet_grid(V3~V4)+
   theme_bw()+scale_fill_brewer(name="",palette = "Set1")+
   xlab('branch lengths (cu.)')+ylab('count')+
-  theme(axis.text.x = element_text(size=10,hjust=1,angle = 40),
-        axis.text.y = element_text(size=10),
-        title = element_text(size=10),
+  theme(axis.text.x = element_text(size=12,hjust=1,angle = 40,color='black'),
+        axis.text.y = element_text(size=12,color='black'),
+        axis.title = element_text(size=14,color='black'),
+        strip.text = element_text(size=12,color='black'),
+        title = element_text(size=12,color='black'),
+        legend.text = element_text(size=14,color='black'),
         legend.position = c(0.1,0.8))+
   scale_x_log10(breaks=c(0.0001,0.001,0.01,0.1,0.5,2,15))+geom_vline(xintercept = 0.1)
-ggsave('figure/results-simulation-0.5M.pdf')
+ggsave('figure/results-simulation-0.5M.pdf',width=9.29, height=5.96)
 
 
 
@@ -54,12 +57,15 @@ ggplot(data=dtarget[dtarget$V1 %in% c("model.200.2000000.0.0000001","model.200.2
   stat_bin(binwidth = 0.1,position = "stack" )+facet_grid(V3~V4)+
   theme_bw()+scale_fill_brewer(name="",palette = "Set1")+
   xlab('branch lengths (cu.)')+ylab('count')+
-  theme(axis.text.x = element_text(size=10,hjust=1,angle = 40),
-        axis.text.y = element_text(size=10),
-        title = element_text(size=10),
+  theme(axis.text.x = element_text(size=12,hjust=1,angle = 40,color='black'),
+        axis.text.y = element_text(size=12,color='black'),
+        axis.title = element_text(size=14,color='black'),
+        strip.text = element_text(size=12,color='black'),
+        title = element_text(size=12,color='black'),
+        legend.text = element_text(size=14,color='black'),
         legend.position = c(0.1,0.8))+
   scale_x_log10(breaks=c(0.0001,0.001,0.01,0.1,0.5,2,15))+geom_vline(xintercept = 0.1)
-ggsave('figure/results-simulation-2M.pdf')
+ggsave('figure/results-simulation-2M.pdf',width=9.29, height=5.96)
 
 
 
@@ -68,12 +74,15 @@ ggplot(data=dtarget[dtarget$V1 %in% c("model.200.10000000.0.000001","model.200.1
   stat_bin(binwidth = 0.1,position = "stack" )+facet_grid(V3~V4)+
   theme_bw()+scale_fill_brewer(name="",palette = "Set1")+
   xlab('branch lengths (cu.)')+ylab('count')+
-  theme(axis.text.x = element_text(size=10,hjust=1,angle = 40),
-        axis.text.y = element_text(size=10),
-        title = element_text(size=10),
-        legend.position = c(0.07,0.8))+
+  theme(axis.text.x = element_text(size=12,hjust=1,angle = 40,color='black'),
+        axis.text.y = element_text(size=12,color='black'),
+        axis.title = element_text(size=14,color='black'),
+        strip.text = element_text(size=12,color='black'),
+        title = element_text(size=12,color='black'),
+        legend.text = element_text(size=11,color='black'),
+        legend.position = c(0.078,0.8))+
   scale_x_log10(breaks=c(0.0001,0.001,0.01,0.1,0.5,2,15))+geom_vline(xintercept = 0.1)
-ggsave('figure/results-simulation-10M.pdf')
+ggsave('figure/results-simulation-10M.pdf',width=9.29, height=5.96)
 
 
 
@@ -82,10 +91,13 @@ ggplot(data=dtarget[dtarget$V1 %in% c("model.200.10000000.0.000001","model.200.1
   stat_bin(binwidth = 0.1,position = "stack" )+facet_grid(V3~V4)+
   theme_bw()+scale_fill_brewer(name="",palette = "Set1")+
   xlab('branch lengths (cu.)')+ylab('count')+
-  theme(axis.text.x = element_text(size=10,hjust=1,angle = 40),
-        axis.text.y = element_text(size=10),
-        title = element_text(size=10),
-        legend.position = c(0.07,0.8))+
+  theme(axis.text.x = element_text(size=12,hjust=1,angle = 40,color='black'),
+        axis.text.y = element_text(size=12,color='black'),
+        axis.title = element_text(size=14,color='black'),
+        strip.text = element_text(size=12,color='black'),
+        title = element_text(size=12,color='black'),
+        legend.text = element_text(size=11,color='black'),
+        legend.position = c(0.078,0.8))+
   scale_x_log10(breaks=c(0.0001,0.001,0.01,0.1,0.5,2,15))+geom_vline(xintercept = 0.1)
 
 
@@ -99,14 +111,15 @@ ggplot(data=dt1,
   stat_summary(fun.y=function(x){length(x[x<0.05])/length(x)*100},geom="line",size=0.6)+
 #  stat_bin(binwidth = 0.1,position = "stack" )+facet_grid(V3~V4)+
   theme_bw()+scale_fill_brewer(name="",palette = "Set1")+
-  xlab('branch lengths (cu.)')+ylab('percent of branches getting rejected for each bin')+
-  theme(axis.text.x = element_text(size=10,hjust=1,angle = 40),
-        axis.text.y = element_text(size=10),
-        title = element_text(size=10),
+  xlab('branch lengths (CU)')+ylab('percent of branches getting rejected for each bin')+
+  theme(axis.text.x = element_text(size=20,hjust=1,angle = 50,color="black"),
+        axis.text.y = element_text(size=20,color="black"),
+        title = element_text(size=15,color="black"),
+        legend.text = element_text(size=15,color="black"),
         legend.position = c(0.83,0.4))+
-  scale_color_grey(start=0.8, end=0.2,name="")+
+  scale_color_brewer(name="",palette ="Set1")+
   scale_linetype_manual(name="",values=c(2,1))
-ggsave('figure/results-simulation-0.5M-line-grey.pdf')
+ggsave('figure/results-simulation-0.5M-line.pdf',width=9.67 ,height=6.74 )
 
 
 dt2<-dtarget[dtarget$V1 %in% c("model.200.2000000.0.0000001","model.200.2000000.0.000001"),]
@@ -118,14 +131,16 @@ ggplot(data=dt2,
   stat_summary(fun.y=function(x){length(x[x<0.05])/length(x)*100},geom="line",size=0.6)+
   #  stat_bin(binwidth = 0.1,position = "stack" )+facet_grid(V3~V4)+
   theme_bw()+scale_fill_brewer(name="",palette = "Set1")+
-  xlab('branch lengths (cu.)')+ylab('percent of branches getting rejected for each bin')+
-  theme(axis.text.x = element_text(size=10,hjust=1,angle = 40),
-        axis.text.y = element_text(size=10),
-        title = element_text(size=10),
+  xlab('branch lengths (CU)')+ylab('percent of branches getting rejected for each bin')+
+  theme(axis.text.x = element_text(size=20,hjust=1,angle = 50,color="black"),
+        axis.text.y = element_text(size=20,color="black"),
+        title = element_text(size=15,color="black"),
+        legend.text = element_text(size=15,color="black"),
         legend.position = c(0.83,0.4))+
-  geom_vline(xintercept = 31,color="red",size=0.6)+scale_color_grey(start=0.8, end=0.2,name="")+
+  geom_vline(xintercept = 31,color="red",size=0.6)+
+  scale_color_brewer(name="",palette ="Set1")+
   scale_linetype_manual(name="",values=c(2,1))
-ggsave('figure/results-simulation-2M-line-grey.pdf')
+ggsave('figure/results-simulation-2M-line.pdf',width=9.67 ,height=6.74 )
 
 
 
@@ -140,14 +155,16 @@ ggplot(data=dt3,
   stat_summary(fun.y=function(x){length(x[x<0.05])/length(x)*100},geom="line",size=0.6)+
   #  stat_bin(binwidth = 0.1,position = "stack" )+facet_grid(V3~V4)+
   theme_bw()+scale_fill_brewer(name="",palette = "Set1")+
-  xlab('branch lengths (cu.)')+ylab('percent of branches getting rejected for each bin')+
-  theme(axis.text.x = element_text(size=10,hjust=1,angle = 40),
-        axis.text.y = element_text(size=10),
-        title = element_text(size=10),
+  xlab('branch lengths (CU)')+ylab('percent of branches getting rejected for each bin')+
+  theme(axis.text.x = element_text(size=20,hjust=1,angle = 50,color="black"),
+        axis.text.y = element_text(size=20,color="black"),
+        legend.text = element_text(size=15,color="black"),
+        title = element_text(size=15,color="black"),
         legend.position = c(0.83,0.4))+
-  geom_vline(xintercept = 31,color="red",size=0.6)+scale_color_grey(start=0.8, end=0.2,name="")+
+  geom_vline(xintercept = 31,color="red",size=0.6)+
+  scale_color_brewer(name="",palette ="Set1")+
   scale_linetype_manual(name="",values=c(2,1))
-ggsave('figure/results-simulation-10M-line-grey.pdf')
+ggsave('figure/results-simulation-10M-line.pdf',width=9.67 ,height=6.74 )
 
 dcast(data=dtarget[dtarget$V5>=0.1 & dtarget$V5<=0.2  & dtarget$V4=="1000gt",],V3~.,
       fun.aggregate = function(x){length(x[x<0.05])/length(x)},value.var="V7")
@@ -203,16 +220,16 @@ htf$V11<-as.factor(htf$V11)
 levels(htf$V11)<-list("Plants (844gt)"="1KP (844)","Avian (2022gt)"="Avian_biological (2022)","Insects (1478gt)"="Insects (1478)","Xenoturbella (Cannon et. al. 212gt)"="Xenoturbella_Cannon (212)","(Rouse et. al. 393gt)"="Xenoturbella_Greg (393)"  )
 ggplot(data=htf[htf$V2=="100"& htf$V4>0,],
        aes(color=V10,x=(as.numeric(as.character(V4))),y=V5))+
-  geom_point(size=1.5)+facet_wrap(~V11,nrow=1)+
+  geom_point(size=1.5)+facet_wrap(~V11,nrow=2)+
   theme_bw()+scale_fill_brewer(name="",palette = "Set1")+
   xlab('branch lengths (cu.)')+ylab('p-value')+
   theme_classic()+theme(axis.text.x = element_text(size=12,hjust=1,angle = 50),
                         axis.text.y = element_text(size=12),
                         title = element_text(size=12),
-                        legend.position = c(0.98,0.8))+
+                        legend.position = c(0.95,0.8))+
   scale_x_log10(breaks=c(0.0001,0.001,0.01,0.1,0.5,2,15))+
-  scale_color_brewer(name="",palette = "Set1")
-ggsave('figure/biological-point.pdf',width=16, height=3.7 )
+  scale_color_manual(name="",values = c("black","#e41a1c"))
+ggsave('figure/biological-point.pdf',width=9.72,height=6.26)
 
 mp<-read.csv('data/map',sep="\t",header=F)
 ht2<-merge(x=htf,y=mp,by.x=c("V1","V6","V7"),by.y=c("V1","V2","V3"))
@@ -220,19 +237,28 @@ levels(ht2$V1)<-list("Plants"="1KP","Avian"="Avian_biological","Insects"="Insect
 
 ggplot(data=ht2[ht2$V2>4 & ht2$V1=="Plants",],aes(x=V8*V2/100,y=V5,color=as.factor(V4.y)))+geom_point()+#facet_wrap(~V4.y)+
   theme_bw()+facet_wrap(~V1)+
-  stat_smooth(se=F)+theme(legend.position = "bottom")+xlab("Number of genes")+ylab("p-value")+
-  geom_hline(yintercept = 0.05,size=0.6)+scale_color_brewer(name="",palette = "Paired")+xlab("Number of genes")+ylab("p-value")+
-  guides(colour=guide_legend(nrow=3))
-ggsave('figure/plants-biological.pdf',width=7.26  ,height=6.72)
+  stat_smooth(se=F)+theme(legend.position = "bottom")+
+  geom_hline(yintercept = 0.05,size=0.6)+
+  scale_color_brewer(name="",palette = "Paired")+xlab("Number of genes")+ylab("p-value")+
+  guides(colour=guide_legend(nrow=3))+
+  theme(axis.text=element_text(size=20,color="black"),
+        axis.title = element_text(size=20,color='black'),
+        strip.text = element_text(size=16,color="black"),
+        legend.text = element_text(size=14,color="black"))
+ggsave('figure/plants-biological.pdf',width=9.96 ,height=7.4)
 
 
-ggplot(data=ht2[ht2$V2>4 & ht2$V1=="Insects" & ht2$V4.y %in% c("G","E","Ingroup","P","J","L"),],aes(x=V8*V2/100,y=V5,color=V4.y))+geom_point()+theme_bw()+
+ggplot(data=ht2[ht2$V2>1 & ht2$V1=="Insects" & ht2$V4.y %in% c("G","E","Ingroup","P","J","L"),],aes(x=V8*V2/100,y=V5,color=V4.y))+geom_point()+theme_bw()+
   facet_wrap(~V1)+
   stat_smooth(se=F)+theme(legend.position = "bottom")+guides(colour=guide_legend(nrow=2))+xlab("Number of genes")+ylab("p-value")+
   geom_hline(yintercept = 0.05,size=0.6)+facet_wrap(~V1)+
   scale_color_brewer(name="",palette = "Paired",labels=c("Holometabola","Acercaria+Hymenoptera","Hexapoda","Orthopteroidea","Pterygota","Psocodea+Holometabola"))+
-  xlab("Number of genes")+ylab("p-value")
-ggsave('figure/insects-biological.pdf',width=7.26  ,height=6.67)
+  xlab("Number of genes")+ylab("p-value")+
+  theme(axis.text=element_text(size=20,color="black"),
+        axis.title = element_text(size=20,color='black'),
+        strip.text = element_text(size=16,color="black"),
+        legend.text = element_text(size=14,color="black"))
+ggsave('figure/insects-biological.pdf',width=9.96 ,height=7.4)
 
 # ggplot(data=ht2[ht2$V1=="Insects" & ht2$V4.y %in% c("G","E","Ingroup","P","J","L"),],aes(x=V8*V2/100,y=log10(V5),color=V4.y))+geom_point()+theme_bw()+
 #   scale_y_continuous(labels = function(x){print(x);10^(x)})+stat_smooth(se=F)+
@@ -245,14 +271,31 @@ ggplot(data=ht2[ht2$V2>4 & ht2$V1%in% c("Xenoturbella (Cannon et. al.)","Xenotur
   geom_point()+facet_wrap(~V1,scales = "free_x")+theme_bw()+
   #scale_y_continuous(labels = function(x){print(x);1-10^(x)},breaks = c(0,log10(0.95),log10(0.5),log10(0.9)))+
   stat_smooth(se=F)+theme(legend.position = "bottom")+xlab("Number of genes")+ylab("p-value")+
-  geom_hline(yintercept = 0.05,size=0.6)+scale_color_brewer(name="",palette = "Paired")+xlab("Number of genes")+ylab("p-value")
-ggsave('figure/xenoturbella-biological.pdf',width=7.26  ,height=6.2)
-
-ggplot(data=ht2[ht2$V2>4 & ht2$V1=="Avian" & 
-                  ! ht2$V4.y %in% c("Core Waterbirds+Phaethontimorphae","Neoaves-Columbea-Otidimorphae","Columbimorphae+Otidimorphae"),],
+  geom_hline(yintercept = 0.05,size=0.6)+scale_color_brewer(name="",palette = "Paired")+xlab("Number of genes")+ylab("p-value")+
+  theme(axis.text=element_text(size=20,color="black"),
+        axis.title = element_text(size=20,color='black'),
+        strip.text = element_text(size=16,color="black"),
+        legend.text = element_text(size=14,color="black"))
+ggsave('figure/xenoturbella-biological.pdf',width=9.96 ,height=7.4)
+htavian<-ht2[ht2$V2>0 & ht2$V1=="Avian" &
+              ! ht2$V4.y %in% c("Core Waterbirds+Phaethontimorphae","Neoaves-Columbea-Otidimorphae","Columbimorphae+Otidimorphae"),]
+htavian$V4.y<-droplevels(htavian$V4.y)
+levels(htavian$V4.y)<-list("A"="Columbea+Otidimorphae","B"="Columbimorphae","C"="Coraciimorphae",            
+                           "D"="Cursorimorphae","E"="Extended Waterbirds","F"="Extended Waterbirds+Hoatzin",
+                           "G"="Otidimorphae" )
+ggplot(data=htavian,
        aes(x=V8*V2/100,y=V5,color=V4.y))+geom_point()+theme_bw()+facet_wrap(~V1)+
   #scale_y_continuous(labels = function(x){print(x);1-10^(x)},breaks = c(0,log10(0.95),log10(0.5),log10(0.9)))+
-  stat_smooth(se=F)+theme(legend.position = "bottom")+
+  stat_smooth(se=F)+theme(legend.position = "right")+
   geom_hline(yintercept = 0.05,size=0.6)+scale_color_brewer(name="",palette = "Paired")+xlab("Number of genes")+ylab("p-value")+
-  guides(colour=guide_legend(nrow=3))
-ggsave('figure/avian-biological.pdf',width=7.26 ,height= 6.67)
+  guides(colour=guide_legend(nrow=3))+
+  theme(axis.text=element_text(size=20,color="black"),
+        axis.title = element_text(size=20,color='black'),
+        strip.text = element_text(size=20,color="black"),
+        legend.text = element_text(size=18,color="black"))
+ggsave('figure/avian-biological.pdf',width=10.8, height= 8.9)
+
+
+
+b<-read.csv('data/effectiven.csv',head=F,sep=" ")
+ggplot(data=b3,aes(x=V1,y=V5,color=t))+geom_boxplot(position = "identity")+theme_bw()
